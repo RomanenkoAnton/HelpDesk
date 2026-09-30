@@ -1,0 +1,9 @@
+@HelpDesk.API_HostAddress = http://localhost:5232
+
+GET {{HelpDesk.API_HostAddress}}/api/departments
+Accept: application/json
+
+###
+
+GET {{HelpDesk.API_HostAddress}}/api/departments/2
+Accept: application/json
