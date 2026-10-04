@@ -1,12 +1,13 @@
-using Scalar.AspNetCore;
-using HelpDesk.API.Data;
-using Microsoft.AspNetCore.Mvc;
-using HelpDesk.API.Models;
-using HelpDesk.API.Data.DTO;
-using HelpDesk.API;
 using AutoMapper;
 using FluentValidation;
+using HelpDesk.API;
+using HelpDesk.API.Data;
+using HelpDesk.API.Data.DTO;
+using HelpDesk.API.Models;
 using HelpDesk.API.Validation;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Scalar.AspNetCore;
 using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -17,6 +18,8 @@ builder.Services.AddOpenApi();
 builder.Services.AddAutoMapper(cfg => { }, typeof(Program));
 builder.Services.AddScoped<IValidator<DepartmentCreateDTO>, DepartmentCreateValidation>();
 builder.Services.AddScoped<IValidator<DepartmentUpdateDTO>, DepartmentUpdateValidation>();
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
 

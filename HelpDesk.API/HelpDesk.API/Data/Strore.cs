@@ -9,7 +9,7 @@ namespace HelpDesk.API.Data
         {
             new Department{Id=1, Title="Рота Звя'зку" },
             new Department{Id=2, Title="Рота Охорони" },
-            new Department{Id=3, Title="Рота Підтримки" },
+            new Department{Id=3, Title="Рота Охорони" },
             
         };
     }
