@@ -5,5 +5,27 @@ Accept: application/json
 
 ###
 
-GET {{HelpDesk.API_HostAddress}}/api/departments/2
+GET {{HelpDesk.API_HostAddress}}/api/department/3
 Accept: application/json
+
+###
+POST {{HelpDesk.API_HostAddress}}/api/department
+Content-Type: application/json
+Accept: application/json
+{
+  "title": "4 bat"
+}
+
+###
+
+Delete {{HelpDesk.API_HostAddress}}/api/department/1
+Accept: application/json
+
+###
+PUT {{HelpDesk.API_HostAddress}}/api/department
+Content-Type: application/json
+Accept: application/json
+{
+  "id": 1,
+  "Title": "New Dep"
+}
