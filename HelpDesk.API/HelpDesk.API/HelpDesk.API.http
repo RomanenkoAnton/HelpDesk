@@ -5,7 +5,7 @@ Accept: application/json
 
 ###
 
-GET {{HelpDesk.API_HostAddress}}/api/department/3
+GET {{HelpDesk.API_HostAddress}}/api/department/5
 Accept: application/json
 
 ###
@@ -13,12 +13,12 @@ POST {{HelpDesk.API_HostAddress}}/api/department
 Content-Type: application/json
 Accept: application/json
 {
-  "title": "4 bat"
+  "title": "Рота Підтримки"
 }
 
 ###
 
-Delete {{HelpDesk.API_HostAddress}}/api/department/1
+Delete {{HelpDesk.API_HostAddress}}/api/department/3
 Accept: application/json
 
 ###
@@ -26,6 +26,28 @@ PUT {{HelpDesk.API_HostAddress}}/api/department
 Content-Type: application/json
 Accept: application/json
 {
-  "id": 1,
-  "Title": "New Dep"
+  "id": 5,
+  "Title": "Рота МТЗ 1"
+}
+
+
+
+###
+
+GET {{HelpDesk.API_HostAddress}}/api/categories
+Accept: application/json
+
+###
+GET {{HelpDesk.API_HostAddress}}/api/category/1
+Accept: application/json
+
+
+
+###
+
+POST {{HelpDesk.API_HostAddress}}/api/category
+Content-Type: application/json
+Accept: application/json
+{
+  "title": "Tablet"
 }

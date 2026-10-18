@@ -10,6 +10,7 @@ namespace HelpDesk.API.Data
             
         }
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

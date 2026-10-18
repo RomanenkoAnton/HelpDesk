@@ -10,6 +10,16 @@ namespace HelpDesk.API
         {
             CreateMap<Department, DepartmentCreateDTO>().ReverseMap();
             CreateMap<Department, DepartmentDTO>().ReverseMap();
+            CreateMap<Department, DepartmentUpdateDTO>().ReverseMap();
+            
+
+
+
+            CreateMap<Category, CategoryCreateDTO>().ReverseMap();
+            CreateMap<Category, CategoryDTO>().ReverseMap();
+            CreateMap<Category, CategoryUpdateDTO>().ReverseMap();
+
+
 
         }
     }

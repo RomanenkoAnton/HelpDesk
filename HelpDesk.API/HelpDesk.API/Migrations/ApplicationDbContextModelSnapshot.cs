@@ -21,6 +21,22 @@ namespace HelpDesk.API.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("HelpDesk.API.Models.Category", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Title")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Categories");
+                });
+
             modelBuilder.Entity("HelpDesk.API.Models.Department", b =>
                 {
                     b.Property<int>("Id")
@@ -50,7 +66,7 @@ namespace HelpDesk.API.Migrations
                         new
                         {
                             Id = 3,
-                            Title = "Рота Охорони"
+                            Title = "Рота Підтримки"
                         });
                 });
 #pragma warning restore 612, 618
