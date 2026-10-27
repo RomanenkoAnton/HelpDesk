@@ -5,6 +5,7 @@ Accept: application/json
 
 ###
 
+
 GET {{HelpDesk.API_HostAddress}}/api/department/5
 Accept: application/json
 
@@ -18,8 +19,10 @@ Accept: application/json
 
 ###
 
+
 Delete {{HelpDesk.API_HostAddress}}/api/department/3
 Accept: application/json
+
 
 ###
 PUT {{HelpDesk.API_HostAddress}}/api/department
@@ -29,13 +32,12 @@ Accept: application/json
   "id": 5,
   "Title": "Рота МТЗ 1"
 }
-
-
-
 ###
+
 
 GET {{HelpDesk.API_HostAddress}}/api/categories
 Accept: application/json
+
 
 ###
 GET {{HelpDesk.API_HostAddress}}/api/category/1
