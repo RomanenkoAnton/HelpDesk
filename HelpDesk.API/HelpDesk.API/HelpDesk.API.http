@@ -53,3 +53,58 @@ Accept: application/json
 {
   "title": "Tablet"
 }
+
+
+### все ТМЦ
+GET {{HelpDesk.API_HostAddress}}/api/units
+Accept: application/json
+
+### создать
+POST {{HelpDesk.API_HostAddress}}/api/unit
+Content-Type: application/json
+
+{ "title": "Lenovo E16", "serialNumber": "SN-001", "categoryId": 1, "departmentId": 1 }
+
+### изменить
+PUT {{HelpDesk.API_HostAddress}}/api/unit
+Content-Type: application/json
+
+{ "id": 1, "title": "Lenovo E16 Gen 2", "serialNumber": "SN-001", "categoryId": 1, "departmentId": 1 }
+
+### удалить
+DELETE {{HelpDesk.API_HostAddress}}/api/unit/1
+
+
+### все заявки
+GET {{HelpDesk.API_HostAddress}}/api/tickets
+Accept: application/json
+
+### создать
+POST {{HelpDesk.API_HostAddress}}/api/ticket
+Content-Type: application/json
+
+{
+  "model": "Lenovo E16",
+  "serialNumber": "SN-001",
+  "departmentId": 1,
+  "notes": "Настроить VPN",
+  "setupDate": "2026-10-31T00:00:00",
+  "invoiceSigned": false
+}
+
+### изменить
+PUT {{HelpDesk.API_HostAddress}}/api/ticket
+Content-Type: application/json
+
+{
+  "id": 1,
+  "model": "Lenovo E16",
+  "serialNumber": "SN-001",
+  "departmentId": 1,
+  "issuedTo": "Иванов И.",
+  "issuedDate": "2026-11-02T00:00:00",
+  "invoiceSigned": true
+}
+
+### удалить
+DELETE {{HelpDesk.API_HostAddress}}/api/ticket/1

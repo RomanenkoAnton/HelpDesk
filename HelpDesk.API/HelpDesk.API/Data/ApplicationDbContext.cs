@@ -11,6 +11,9 @@ namespace HelpDesk.API.Data
         }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<Unit> Units { get; set; }
+        public DbSet<Ticket> Tickets { get; set; }
+
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
