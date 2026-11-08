@@ -13,6 +13,7 @@ namespace HelpDesk.API.Data
         public DbSet<Category> Categories { get; set; }
         public DbSet<Unit> Units { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
+        public DbSet<LocalUser> LocalUsers { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
